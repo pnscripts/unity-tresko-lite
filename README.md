@@ -37,7 +37,7 @@ press Play.
 
 The full edition, Tresko, adds squash and stretch, hit flash, knockback,
 punch, easing and one `Impact()` call:
-https://pnscripts.com/marketplace/tresko. Lite is complete on its own.
+https://pnscripts.com/marketplace/unity-tresko. Lite is complete on its own.
 
 ## Build and test
 
