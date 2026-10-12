@@ -1,0 +1,14 @@
+{
+    "name": "PNScripts.TreskoLite",
+    "rootNamespace": "PNScripts.TreskoLite",
+    "references": ["PNScripts.TreskoLite.Core"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

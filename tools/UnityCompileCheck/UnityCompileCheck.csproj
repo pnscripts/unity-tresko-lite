@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Compiles the Unity package (core, runtime components, editor inspectors and the sample) against
+    the UnityEngine/UnityEditor assemblies of an installed Unity editor. Nothing is run, so no Unity
+    licence is needed. This proves the code compiles; it does not prove behaviour inside the editor.
+
+      dotnet build tools/UnityCompileCheck -p:UnityManaged=/path/to/Editor/Data/Managed
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>CS0649</NoWarn>
+    <UnityManaged Condition="'$(UnityManaged)' == ''">$(HOME)/Unity/Hub/Editor/6000.5.4f1/Editor/Data/Managed</UnityManaged>
+    <Pkg>../../unity/com.pnscripts.tresko-lite</Pkg>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/TreskoLite.Core/*.cs" />
+    <Compile Include="$(Pkg)/Runtime/*.cs" />
+    <Compile Include="$(Pkg)/Editor/*.cs" />
+    <Compile Include="$(Pkg)/Samples~/ShakeDemo/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEngine.IMGUIModule.dll" Private="false" />
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEngine.Physics2DModule.dll" Private="false" />
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(UnityManaged)/UnityEngine/UnityEditor.CoreModule.dll" Private="false" />
+  </ItemGroup>
+</Project>

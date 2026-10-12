@@ -1,0 +1,22 @@
+{
+  "name": "com.pnscripts.tresko-lite",
+  "version": "1.0.0",
+  "displayName": "Tresko Lite: Camera Shake and Hit-Stop",
+  "description": "Free game feel for Unity: trauma camera shake that leaves your camera controller in charge, and hit-stop that restores your time scale. Plain C# core with tests. By PN Scripts, MIT licence.",
+  "unity": "2022.3",
+  "license": "MIT",
+  "author": {
+    "name": "PN Scripts",
+    "email": "office@pnscripts.com",
+    "url": "https://pnscripts.com"
+  },
+  "documentationUrl": "https://github.com/pnscripts/tresko-lite#readme",
+  "keywords": ["game feel", "juice", "screen shake", "camera shake", "hit stop", "freeze frame"],
+  "samples": [
+    {
+      "displayName": "Shake Demo",
+      "description": "Builds a camera and a cube at runtime and hits on a timer: shake and hit-stop. Add the component to an empty GameObject in an empty scene and press Play.",
+      "path": "Samples~/ShakeDemo"
+    }
+  ]
+}
