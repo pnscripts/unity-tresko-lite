@@ -1,16 +1,16 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace PNScripts.TreskoLite.Editor
+namespace PNScripts.WhumpkitLite.Editor
 {
     /// <summary>Try buttons in Play mode, so shake and hit-stop can be tuned while the game runs.</summary>
-    [CustomEditor(typeof(TreskoLiteShake))]
-    public sealed class TreskoLiteShakeEditor : UnityEditor.Editor
+    [CustomEditor(typeof(WhumpkitLiteShake))]
+    public sealed class WhumpkitLiteShakeEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-            var shake = (TreskoLiteShake)target;
+            var shake = (WhumpkitLiteShake)target;
             using (new EditorGUI.DisabledScope(!Application.isPlaying))
             {
                 EditorGUILayout.Space();
@@ -25,13 +25,13 @@ namespace PNScripts.TreskoLite.Editor
         }
     }
 
-    [CustomEditor(typeof(TreskoLiteHitStop))]
-    public sealed class TreskoLiteHitStopEditor : UnityEditor.Editor
+    [CustomEditor(typeof(WhumpkitLiteHitStop))]
+    public sealed class WhumpkitLiteHitStopEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-            var stop = (TreskoLiteHitStop)target;
+            var stop = (WhumpkitLiteHitStop)target;
             using (new EditorGUI.DisabledScope(!Application.isPlaying))
             {
                 EditorGUILayout.Space();

@@ -1,18 +1,18 @@
 using UnityEngine;
 
-namespace PNScripts.TreskoLite.Samples
+namespace PNScripts.WhumpkitLite.Samples
 {
     /// <summary>
-    /// Shake Demo for Tresko Lite: add this component to an empty GameObject in an empty scene and
+    /// Shake Demo for Whumpkit Lite: add this component to an empty GameObject in an empty scene and
     /// press Play. It makes a camera with a shaker child, a hit-stop and a spinning cube, hits on a
     /// timer and has on-screen buttons, so it needs no input system.
     /// </summary>
-    public sealed class TreskoLiteShakeDemo : MonoBehaviour
+    public sealed class WhumpkitLiteShakeDemo : MonoBehaviour
     {
         public float hitEvery = 1.2f;
 
-        private TreskoLiteShake _shake;
-        private TreskoLiteHitStop _stop;
+        private WhumpkitLiteShake _shake;
+        private WhumpkitLiteHitStop _stop;
         private Transform _cube;
         private float _next;
         private bool _heavy;
@@ -25,8 +25,8 @@ namespace PNScripts.TreskoLite.Samples
             cam.tag = "MainCamera";
             cam.transform.SetParent(rig, false);
             cam.transform.localRotation = Quaternion.Euler(8f, 0f, 0f);
-            _shake = cam.gameObject.AddComponent<TreskoLiteShake>();
-            _stop = gameObject.AddComponent<TreskoLiteHitStop>();
+            _shake = cam.gameObject.AddComponent<WhumpkitLiteShake>();
+            _stop = gameObject.AddComponent<WhumpkitLiteHitStop>();
             new GameObject("Light", typeof(Light)).GetComponent<Light>().type = LightType.Directional;
             _cube = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
             _cube.position = new Vector3(0f, 1f, 0f);

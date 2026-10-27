@@ -1,6 +1,6 @@
 using System;
 
-namespace PNScripts.TreskoLite
+namespace PNScripts.WhumpkitLite
 {
     /// <summary>
     /// Hit-stop (freeze frames) as a time-scale clock driven by real time. Freeze(0.08) drops

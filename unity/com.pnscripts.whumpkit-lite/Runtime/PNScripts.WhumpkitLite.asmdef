@@ -1,7 +1,7 @@
 {
-    "name": "PNScripts.TreskoLite",
-    "rootNamespace": "PNScripts.TreskoLite",
-    "references": ["PNScripts.TreskoLite.Core"],
+    "name": "PNScripts.WhumpkitLite",
+    "rootNamespace": "PNScripts.WhumpkitLite",
+    "references": ["PNScripts.WhumpkitLite.Core"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

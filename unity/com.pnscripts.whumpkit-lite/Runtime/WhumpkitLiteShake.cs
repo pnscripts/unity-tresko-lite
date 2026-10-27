@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PNScripts.TreskoLite
+namespace PNScripts.WhumpkitLite
 {
     /// <summary>
     /// Trauma camera shake for any Transform (usually the camera, or a child "shaker" object
@@ -8,9 +8,9 @@ namespace PNScripts.TreskoLite
     /// your camera controller, Cinemachine or animation keeps full control of the real position.
     /// Runs on unscaled time by default, so it keeps shaking during hit-stop.
     /// </summary>
-    [AddComponentMenu("PN Scripts/Tresko Lite/Shake")]
+    [AddComponentMenu("PN Scripts/Whumpkit Lite/Shake")]
     [DisallowMultipleComponent]
-    public sealed class TreskoLiteShake : MonoBehaviour
+    public sealed class WhumpkitLiteShake : MonoBehaviour
     {
         [Tooltip("Same seed, same motion.")]
         public int seed = 1;

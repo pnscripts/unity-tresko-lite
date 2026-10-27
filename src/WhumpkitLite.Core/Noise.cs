@@ -1,6 +1,6 @@
 using System;
 
-namespace PNScripts.TreskoLite
+namespace PNScripts.WhumpkitLite
 {
     /// <summary>
     /// Smooth, seeded 1D gradient noise in -1..1 (Perlin style, quintic fade). The same seed

@@ -1,15 +1,15 @@
 using UnityEngine;
 
-namespace PNScripts.TreskoLite
+namespace PNScripts.WhumpkitLite
 {
     /// <summary>
     /// Hit-stop: freezes or slows Time.timeScale for a short real-time duration and then puts
     /// back the scale the game had (your slow motion survives). Overlapping freezes extend,
     /// long chains are capped. One per scene is enough; Instance finds it.
     /// </summary>
-    [AddComponentMenu("PN Scripts/Tresko Lite/Hit Stop")]
+    [AddComponentMenu("PN Scripts/Whumpkit Lite/Hit Stop")]
     [DisallowMultipleComponent]
-    public sealed class TreskoLiteHitStop : MonoBehaviour
+    public sealed class WhumpkitLiteHitStop : MonoBehaviour
     {
         [Tooltip("Longest total freeze in one chain of hits (seconds of real time).")]
         public float maxTotal = 0.35f;
@@ -18,7 +18,7 @@ namespace PNScripts.TreskoLite
 
         private readonly HitStop _stop = new HitStop();
 
-        public static TreskoLiteHitStop Instance { get; private set; }
+        public static WhumpkitLiteHitStop Instance { get; private set; }
         public bool IsFrozen => _stop.IsActive;
 
         private void OnEnable()

@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using PNScripts.TreskoLite;
+using PNScripts.WhumpkitLite;
 using Xunit;
 
-namespace TreskoLite.Tests
+namespace WhumpkitLite.Tests
 {
     public class NoiseTests
     {

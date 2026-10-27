@@ -1,7 +1,7 @@
 {
-    "name": "PNScripts.TreskoLite.Editor",
-    "rootNamespace": "PNScripts.TreskoLite.Editor",
-    "references": ["PNScripts.TreskoLite", "PNScripts.TreskoLite.Core"],
+    "name": "PNScripts.WhumpkitLite.Editor",
+    "rootNamespace": "PNScripts.WhumpkitLite.Editor",
+    "references": ["PNScripts.WhumpkitLite", "PNScripts.WhumpkitLite.Core"],
     "includePlatforms": ["Editor"],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

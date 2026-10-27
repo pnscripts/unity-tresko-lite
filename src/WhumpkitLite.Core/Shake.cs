@@ -1,6 +1,6 @@
 using System;
 
-namespace PNScripts.TreskoLite
+namespace PNScripts.WhumpkitLite
 {
     /// <summary>Offsets of one shake frame: position in units, rotation in degrees.</summary>
     public struct ShakeOffset

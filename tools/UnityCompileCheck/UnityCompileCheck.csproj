@@ -14,10 +14,10 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <NoWarn>CS0649</NoWarn>
     <UnityManaged Condition="'$(UnityManaged)' == ''">$(HOME)/Unity/Hub/Editor/6000.5.4f1/Editor/Data/Managed</UnityManaged>
-    <Pkg>../../unity/com.pnscripts.tresko-lite</Pkg>
+    <Pkg>../../unity/com.pnscripts.whumpkit-lite</Pkg>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="../../src/TreskoLite.Core/*.cs" />
+    <Compile Include="../../src/WhumpkitLite.Core/*.cs" />
     <Compile Include="$(Pkg)/Runtime/*.cs" />
     <Compile Include="$(Pkg)/Editor/*.cs" />
     <Compile Include="$(Pkg)/Samples~/ShakeDemo/*.cs" />

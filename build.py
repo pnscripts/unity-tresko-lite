@@ -3,13 +3,13 @@
 
     python3 build.py
 
-Copies the plain C# core (src/Tresko.Core/*.cs) into Runtime/Core with its own assembly
+Copies the plain C# core (src/Whumpkit.Core/*.cs) into Runtime/Core with its own assembly
 definition (no engine references), adds README, LICENSE and CHANGELOG, writes a .meta file with a
 stable GUID for every file and folder (Unity needs them for read-only tarball packages) and writes:
 
-  release/com.pnscripts.tresko-lite-1.0.0.tgz   Package Manager > + > Add package from tarball
-  release/com.pnscripts.tresko-lite-1.0.0.zip   the same folder, to unpack into <project>/Packages/
-  build/AssetStore/Assets/PN Scripts/Tresko Lite/  the same files under one root folder, as the
+  release/com.pnscripts.whumpkit-lite-2.0.0.tgz   Package Manager > + > Add package from tarball
+  release/com.pnscripts.whumpkit-lite-2.0.0.zip   the same folder, to unpack into <project>/Packages/
+  build/AssetStore/Assets/PN Scripts/Whumpkit Lite/  the same files under one root folder, as the
       Asset Store asks (guideline 2.1.a); open build/AssetStore as a Unity project and export it
       with the Asset Store Publishing Tools.
 """
@@ -21,15 +21,15 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-NAME = "com.pnscripts.tresko-lite"
+NAME = "com.pnscripts.whumpkit-lite"
 SRC = ROOT / "unity" / NAME
-CORE = ROOT / "src" / "TreskoLite.Core"
+CORE = ROOT / "src" / "WhumpkitLite.Core"
 STAGE = ROOT / "build" / NAME
 DIST = ROOT / "release"
 VERSION = json.loads((SRC / "package.json").read_text())["version"]
 
 CORE_ASMDEF = {
-    "name": "PNScripts.TreskoLite.Core", "rootNamespace": "PNScripts.TreskoLite", "references": [],
+    "name": "PNScripts.WhumpkitLite.Core", "rootNamespace": "PNScripts.WhumpkitLite", "references": [],
     "includePlatforms": [], "excludePlatforms": [], "allowUnsafeCode": False, "overrideReferences": False,
     "precompiledReferences": [], "autoReferenced": True, "defineConstraints": [], "versionDefines": [],
     "noEngineReferences": True,
@@ -56,7 +56,7 @@ def main():
     core.mkdir(parents=True)
     for cs in sorted(CORE.glob("*.cs")):
         shutil.copy(cs, core / cs.name)
-    (core / "PNScripts.TreskoLite.Core.asmdef").write_text(json.dumps(CORE_ASMDEF, indent=4) + "\n")
+    (core / "PNScripts.WhumpkitLite.Core.asmdef").write_text(json.dumps(CORE_ASMDEF, indent=4) + "\n")
     shutil.copy(ROOT / "README.md", STAGE / "README.md")
     shutil.copy(ROOT / "LICENSE", STAGE / "LICENSE.md")
     shutil.copy(ROOT / "CHANGELOG.md", STAGE / "CHANGELOG.md")
@@ -82,7 +82,7 @@ def main():
     # Asset Store layout: one root folder under Assets/, samples included as a normal folder.
     store = ROOT / "build" / "AssetStore"
     shutil.rmtree(store, ignore_errors=True)
-    root = store / "Assets" / "PN Scripts" / "Tresko Lite"
+    root = store / "Assets" / "PN Scripts" / "Whumpkit Lite"
     shutil.copytree(STAGE, root, ignore=shutil.ignore_patterns("*.meta", "package.json", "Samples~"))
     shutil.copytree(STAGE / "Samples~" / "ShakeDemo", root / "Samples" / "ShakeDemo")
     (store / "ProjectSettings").mkdir(parents=True)
